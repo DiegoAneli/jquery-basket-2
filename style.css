@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.container {
+  width: 800px;
+  height: 500px;
+  background-color: yellow;
+
+}
+
+.cnt_sx {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+
+}
+
+.cnt_dx {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: green;
+
+}
+.giocatore {
+  width: 200px;
+  height: 200px;
+  background-color: darkgrey;
+}
+
+.template {
+  display: none;
+}
