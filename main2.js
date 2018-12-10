@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var source = document.getElementById("entry-template").innerHTML;
-  var template = Handlebars.compile(source);
+  var nuovoTemplate = document.getElementById("template").innerHTML;
+  var nuovoTemplate = Handlebars.compile(source);
 
 });
