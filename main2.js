@@ -48,7 +48,6 @@ $(document).ready(function(){
 })
 
 
-
 function creaCodice(){
     var codePlayer = "";
     var casualNumber = "";

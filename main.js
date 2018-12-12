@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
   var giocatori = [];
-
   $('#userinput').keypress(function(event){
 
     if(event.which == 13){
