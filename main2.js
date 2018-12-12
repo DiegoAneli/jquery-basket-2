@@ -72,19 +72,3 @@ function creaCodice(){
 
     return codePlayer;
 }
-
-
-
-
-
-
-// var codgiocatoretemp = $('.template .giocatore_template').clone();
-// codgiocatoretemp.text(codiceGiocatore);
-// $('.giocatore').append(codgiocatoretemp);
-//
-// var templatescheda = $('.template .template_scheda').clone();
-// var scheda_da_inserire = $('.template .template_scheda .scheda_giocatore').clone();
-// scheda_da_inserire.children('.punti_Segnati').text(puntiFatti);
-// scheda_da_inserire.children('.num_rimbalzi').text(rimbalzi);
-// // $('.scheda_giocatore').append(scheda_da_inserire);
-// $('.schede_wrapper').append(templatescheda);
