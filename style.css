@@ -4,19 +4,26 @@
   box-sizing: border-box;
 }
 
+.contenitore {
+  height: 100vh;
+  width: 100%;
+  background: url('basket.jpg');
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: darkred;
+}
 .wrapper_generale {
   display: flex;
   justify-content: flex-start;
-  margin: 100px auto;
-  width: 800px;
-  height: 800px;
-  background-color: red;
+  width: 500px;
+  height: 390px;
+
 }
 
 .codici_player {
   width: 40%;
   height: 100%;
-  background-color: yellow;
   overflow-y: auto;
 }
 
@@ -24,8 +31,9 @@
   width: 100%;
   height: 60px;
   line-height: 60px;
-  border-bottom: 1px solid black;
-  background-color: white;
+  border-bottom: 1px solid darkred;
+  border-radius: 1px;
+  background-color: antiquewhite;
   cursor: pointer;
 }
 

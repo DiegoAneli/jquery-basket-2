@@ -24,12 +24,7 @@ for (var i = 0; i < 100; i++) {
 $(document).ready(function(){
   for (var i = 0; i < giocatori.length; i++) {
     var playercode = giocatori[i].codice_Giocatore;
-    // var divgiocatore = '<div class="playercode">' + codicegiocatore + '</div>';
-
-    // console.log("scrivo l'oggetto");
-    // console.log(giocatori[i].codice_Giocatore);
     var source = $('#playercode_template').html();
-     //document.getElementById("playercode_template").innerHTML;
     var template = Handlebars.compile(source);
     var context = {codicegiocatore : playercode};
     var html    = template(context);
@@ -42,7 +37,6 @@ $(document).ready(function(){
       if (thisCode == playercode) {
         console.log(giocatori[i]);
         var source = $('#stats_template').html();
-         //document.getElementById("playercode_template").innerHTML;
         var template = Handlebars.compile(source);
         var context = {code : giocatori[i].codice_Giocatore, bounce : giocatori[i].num_Rimbalzi, score : giocatori[i].punti_Segnati, fault : giocatori[i].falli, shoots2 : giocatori[i].successo_duePunti, shoots3 : giocatori[i].successo_trePunti };
         var html    = template(context);

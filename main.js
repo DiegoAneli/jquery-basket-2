@@ -1,42 +1,26 @@
-var giocatori = [];
+$(document).ready(function(){
 
-//Creo gli oggetti e gli assegno dei valori
-for (var i = 0; i < 100; i++) {
-    var codiceGiocatore = creaCodice();
-    var puntiFatti = Math.floor(Math.random() * 31);
-    var rimbalzi = Math.floor(Math.random()*(55 - 20 + 1) + 20);
-    var falli = Math.floor(Math.random() * 3);
-    var percSuccDuePunti = Math.floor((Math.random() * 100) + 1);
-    var percSuccTrePunti = Math.floor((Math.random() * 100) + 1);
-    var nomeGiocatore = {
-        "codice_Giocatore" : codiceGiocatore,
-        "punti_Segnati" : puntiFatti,
-        "num_Rimbalzi" : rimbalzi,
-        "falli" : falli,
-        "successo_duePunti" : percSuccDuePunti,
-        "successo_trePunti" : percSuccTrePunti
+  var giocatori = [];
+
+  $('#userinput').keypress(function(event){
+
+    if(event.which == 13){
+      var thisInput = $(this);
+      var numeroGiocatoriRichiesti = thisInput.val();
+      console.log(numeroGiocatoriRichiesti);
+      $.ajax({
+        url: 'https://www.boolean.careers/api/array/basket',
+        method: 'GET',
+        data: {
+          n: userinput
+        },
+        success: function(data){
+          console.log(data);
+        },
+        error: function(){
+          alert("si è verificato un errore");
+        },
+      })
     }
-
-    giocatori.push(nomeGiocatore);
-    
-}
-
-
-
-function creaCodice(){
-    var codePlayer = "";
-    var casualNumber = "";
-
-    for (var i = 0; i < 3; i++) {
-      //Genero una lettera casuale maiuscola prendendo i valori dall'unicode
-      var casualLetter = String.fromCharCode(Math.floor((Math.random()*(90 - 65 + 1) + 65)));
-      codePlayer += casualLetter;
-    }
-
-    for (var i = 0; i < 3; i++) {
-      casualNumber = Math.floor((Math.random() * 9) + 1);
-      codePlayer += casualNumber;
-    }
-
-    return codePlayer;
-}
+  });
+});
